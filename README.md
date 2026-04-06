@@ -77,12 +77,9 @@ src/
 GET /auth/login/:role/:id
 
 - Token includes:
-```json
-{
-  "id": "user_id",
-  "role": "free | premium"
-}
-Middleware decodes token and attaches user to request.
+json
+{ "id": "user_id", "role": "free | premium" }
+
 
 🚦 Rate Limiting Logic
 This project uses a **Sliding Window Algorithm** implemented with Redis.
