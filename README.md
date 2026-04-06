@@ -82,10 +82,10 @@ json
 
 
 🚦 Rate Limiting Logic
-This project uses a **Sliding Window Algorithm** implemented with Redis.
-Stores request timestamps in Redis
-Filters requests within time window
-Blocks requests beyond threshold
+- Requests are stored in Redis using Sorted Sets (ZSET)
+- Timestamp is used as score
+- Old requests removed using ZREMRANGEBYSCORE
+- Count calculated using ZCARD
 
 ### Approach:
 
